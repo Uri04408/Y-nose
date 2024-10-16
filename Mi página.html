@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de la Página</title>
+    <style>
+        /* Estilo del fondo GIF */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Altura completa de la ventana */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centra el texto verticalmente */
+            align-items: center; /* Centra el texto horizontalmente */
+            background-image: url('https://i.gifer.com/fyEi.gif'); /* URL del GIF que usas como fondo */
+            background-size: cover; /* Hace que el GIF cubra todo el fondo */
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white; /* Color del texto para que sea visible en el fondo */
+            text-align: center; /* Centra el texto */
+        }
+        h1, h2, h5 {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Agrega sombra para resaltar el texto */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.8); /* Botón con fondo semi-transparente */
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* Ocultar el video si no quieres que se vea */
+        iframe {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Hola Mi Amor!</h1>
+
+    <h5>Estoy probando esto a ver que onda xD
+        la verdad no es muy difícil de usar, es algo más o menos fácil. Probemos otra cosa.
+    </h5>
+
+    <h2>Aca con mi gordita</h2>
+    <img src="prueba/gordita.jpg" alt="Aca con mi gordita" width="150" height="100">
+
+    <!-- Incrustar el video de YouTube con autoplay y silenciado -->
+    <iframe id="videoMusica" src="https://www.youtube.com/embed/evr0DTiiRlo?autoplay=1&loop=1&playlist=evr0DTiiRlo&controls=0&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    <!-- Botón para activar el sonido -->
+    <button onclick="activarSonido()">Activar Sonido</button>
+
+    <script>
+        function abrirNuevaPestana() {
+            window.open("https://youtu.be/evr0DTiiRlo?si=KxXtWRYMdWM22z6Y", "_blank"); // Cambia la URL por la que desees
+        }
+
+        function activarSonido() {
+            var iframe = document.getElementById('videoMusica');
+            iframe.src = iframe.src.replace('mute=1', 'mute=0');
+        }
+    </script>
+</body>
+</html>
